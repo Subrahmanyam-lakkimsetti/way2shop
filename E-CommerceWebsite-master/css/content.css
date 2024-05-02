@@ -1,0 +1,117 @@
+/* Resetting default margin and font */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Styling for main headings */
+h1 {
+    width: 90%;
+    margin: auto;
+    padding: 50px 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: rgb(65, 62, 62); 
+}
+
+/* Grid container for clothing and accessories */
+#containerClothing, #containerAccessories {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Automatically adjust columns based on available space */
+    width: 90%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+/* Styling for individual item boxes */
+#box {
+    width: 100%;
+    background-color: white;
+    align-content: center;
+    border-radius: 10px;
+    box-shadow: 1px 2px 6px 2px rgb(65, 62, 62); /* Changed box shadow color */
+    transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow on hover */
+}
+
+/* Hover effect for item boxes */
+#box:hover {
+    box-shadow: 1px 6px 3px 0 rgb(11, 9, 9); /* Changed box shadow color on hover */
+}
+
+/* Styling for item images */
+#containerClothing img, #containerAccessories img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Styling for item details */
+#details {
+    padding: 0 15px;
+    text-transform: capitalize;
+}
+
+/* Styling for item links */
+#box a {
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+}
+
+/* Additional styles for subheadings */
+h2 {
+    color: rgb(3, 94, 94);
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h4 {
+    font-weight: 100;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 1070px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 850px) {
+    h1 {
+        width: 80%;
+    }
+    #containerClothing, #containerAccessories {
+        width: 80%;
+    }
+}
+
+@media (max-width: 650px) {
+    h1 {
+        font-size: 20px;
+    }
+    h1, #containerClothing, #containerAccessories {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        width: 70%;
+    }
+    #containerClothing, #containerAccessories {
+        width: 70%;
+    }
+}
+
+@media (max-width: 505px) {
+    h1 {
+        width: 80%;
+    }
+    #containerClothing, #containerAccessories {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
